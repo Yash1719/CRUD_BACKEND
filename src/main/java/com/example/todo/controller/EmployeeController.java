@@ -42,7 +42,7 @@ public class EmployeeController {
                 .orElseThrow(()-> new ResourceNotFoundException("Employee not exist with id:"+id));
         return ResponseEntity.ok(employee);
     }
-    //update employee
+    //update employee for the CRUD
     @PutMapping("/employees/{id}")
     public ResponseEntity<Employee> updateEmployee(@PathVariable Long id,@RequestBody Employee employeeDetails)
     {
